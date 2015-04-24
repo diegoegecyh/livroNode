@@ -1,0 +1,22 @@
+html{
+    overflow-x:hidden;
+}
+body {
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+.logo-txt{
+    text-align: center;
+}
+.footer-txt{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.form-login{
+    margin-top: 20px;
+    padding: 40px 5px 20px 5px;
+}
+#main{
+
+}
