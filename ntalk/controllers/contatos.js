@@ -4,7 +4,7 @@ module.exports = function(app){
 			var usuario = req.session.usuario,
 				contatos = usuario.contatos,
 				params = {usuario: usuario,
-						  contatos: contato};
+						  contatos: contatos};
 			res.render('contatos/index', params);
 		},
 		create: function(req, res){
