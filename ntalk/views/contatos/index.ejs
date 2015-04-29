@@ -1,6 +1,6 @@
 <%include ../header %>
 <header class="row">
-	<div class="col-md-12 agenda-contatos-txt">
+	<div class="col-md-12 ntalk-txt">
 		<h2>Ntalk - Agenda de contatos</h2>
 	</div>
 </header>
@@ -32,6 +32,7 @@
   				<tr>
   					<th>Nome</th>
   					<th>E-mail</th>
+  					<th>Status</th>
   					<th>Ação</th>
   				</tr>
   			</thead>
@@ -40,9 +41,12 @@
   				<tr>
   					<td><%- contato.nome %></td>
   					<td><%- contato.email %></td>
+  					<th>
+  						<span id="notify_<%- contato.email%>">Offline</span>
+  					</th>
   					<td>
   						<a href="/contato/<%- index %>">Detalhes</a>
-  						<a href="/chat">Conversar</a>
+  						<a href="/chat" id="chat_<%- contato.email %>">Conversar</a>
   					</td>
   				</tr>
   				<% }) %>
@@ -50,5 +54,6 @@
   		</table>
 	</div>
 </div>
+<%include notify_script %>
 <%include ../exit %>
 <%include ../footer %>
